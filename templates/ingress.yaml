@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: monitoring.k8s.io
+    - host: monitoring.f1-platform.k8s.io
       http:
         paths:
           - path: /
@@ -33,7 +33,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: aggregate.k8s.io
+    - host: aggregate.f1-platform.k8s.io
       http:
         paths:
           - path: /
