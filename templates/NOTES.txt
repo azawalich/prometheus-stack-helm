@@ -1,0 +1,8 @@
+Thank you for installing {{ .Chart.Name }}.
+
+Please be advised, that beforehand you need to install Prometheus and Grafana on your cluster - as this chart just conviniently does service/ingress for Commuinty Prometheus stack.
+
+It's the best to do it with:
+    $ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+    $ helm repo update
+    $ helm install prometheus prometheus-community/kube-prometheus-stack -n f1-platform
