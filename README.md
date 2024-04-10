@@ -1,5 +1,12 @@
-# sample-helm
-Repository for exemplary code - of a working Helm Chart deployed to minikube Kubernetes local cluster.
+# prometheus-stack-helm
+Repository holding code for deploying necessary objects to access Community-based Prometheus/Grafana monitoring and observability stack.
+
+# Example
+## Homepage
+![sample image](./images/grafana-dashboard-homepage.png)
+
+## Live demo
+You can see the dashboard live [here, on Raintank.io](https://snapshots.raintank.io/dashboard/snapshot/aWgme2LcBbcMGJKDdWF9zoVKqJoOrxQz?orgId=0&fbclid=IwAR18eVZCqc1DH5hWIXbam2jw48poUQIZh2El7av8FSbRVytsp7NjB1pKtCM)
 
 # Execution steps
 ## 0. RUNNING MINIKUBE LOCAL CLUSTER ##

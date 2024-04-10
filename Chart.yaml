@@ -3,4 +3,4 @@ name: prometheus-stack-helm
 description: A custom Helm chart for Prometheus/Grafana monitoring stack
 type: application
 version: 0.1.0
-appVersion: "v0.1"
+appVersion: "v0.2"
