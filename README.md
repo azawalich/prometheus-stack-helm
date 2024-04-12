@@ -3,7 +3,9 @@ Repository holding code for deploying necessary objects to access Community-base
 
 # Example
 ## Homepage
-![sample image](./images/grafana-dashboard-homepage.png)
+![sample image](./images/homepage.png)
+## Dashboard
+![sample image](./images/dashboard-homepage.png)
 
 ## Live demo
 You can see the dashboard live [here, on Raintank.io](https://snapshots.raintank.io/dashboard/snapshot/aWgme2LcBbcMGJKDdWF9zoVKqJoOrxQz?orgId=0&fbclid=IwAR18eVZCqc1DH5hWIXbam2jw48poUQIZh2El7av8FSbRVytsp7NjB1pKtCM)
