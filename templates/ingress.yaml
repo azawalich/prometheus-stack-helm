@@ -2,15 +2,19 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
     name: prometheus-ingress
-    namespace: f1-platform
     annotations:
-      kubernetes.io/ingress.class: nginx
-      nginx.ingress.kubernetes.io/rewrite-target: /
-      nginx.ingress.kubernetes.io/proxy-body-size: "0"
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
+      kubernetes.io/ingress.class: "nginx"
+    labels:
+      app: f1-platform
+      component: prometheus
 spec:
-  ingressClassName: nginx
+  tls:
+    - hosts:
+      - monitoring.f1-platform.zawalich.pl
+      secretName: echo-tls
   rules:
-    - host: monitoring.f1-platform.k8s.io
+    - host: monitoring.f1-platform.zawalich.pl
       http:
         paths:
           - path: /
@@ -25,15 +29,19 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
     name: grafana-ingress
-    namespace: f1-platform
     annotations:
-      kubernetes.io/ingress.class: nginx
-      nginx.ingress.kubernetes.io/rewrite-target: /
-      nginx.ingress.kubernetes.io/proxy-body-size: "0"
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
+      kubernetes.io/ingress.class: "nginx"
+    labels:
+      app: f1-platform
+      component: grafana
 spec:
-  ingressClassName: nginx
+  tls:
+    - hosts:
+      - aggregate.f1-platform.zawalich.pl
+      secretName: echo-tls
   rules:
-    - host: aggregate.f1-platform.k8s.io
+    - host: aggregate.f1-platform.zawalich.pl
       http:
         paths:
           - path: /
